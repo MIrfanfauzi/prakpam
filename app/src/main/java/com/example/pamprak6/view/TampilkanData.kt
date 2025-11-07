@@ -71,7 +71,33 @@ fun TampilData(
             Column(
                 modifier = Modifier.padding(all = dimensionResource(id = R.dimen.padding_medium)),
                 verticalArrangement = Arrangement.spacedBy(space = dimensionResource(id = R.dimen.padding_small))
-            ) {}
+            ) {
+                items.forEach { item ->
+                    ElevatedCard(
+                        shape = RoundedCornerShape(16.dp),
+                        colors = CardDefaults.elevatedCardColors(
+                            containerColor = Color.White
+                        ),
+                        modifier = Modifier.fillMaxWidth()
+                    ) {
+                        Column(
+                            modifier = Modifier.padding(16.dp)
+                        ) {
+                            Text(
+                                text = item.first.uppercase(),
+                                fontSize = 16.sp
+                            )
+                            Text(
+                                text = item.second,
+                                fontWeight = FontWeight.Bold,
+                                fontFamily = FontFamily.Cursive,
+                                fontSize = 22.sp
+                            )
+                        }
+                        HorizontalDivider(thickness = 1.dp)
+                    }
+                }
+            }
         }
     }
 }
