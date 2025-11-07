@@ -25,9 +25,16 @@ fun DataApp(
     Scaffold { isiRuang ->
         NavHost(
             navController = navController,
-            // 🟣 mulai dari TampilanAwal
             startDestination = Navigasi.Awal.name,
             modifier = Modifier.padding(isiRuang)
-        ) {}
+        ) {
+            composable(route = Navigasi.Awal.name) {
+                TampilanAwal(
+                    onSubmitClick = {
+                        navController.navigate(Navigasi.Formulirku.name)
+                    }
+                )
+            }
+        }
     }
 }
