@@ -107,7 +107,16 @@ fun TampilData(
                 ) {
                     Text(text = stringResource(id = R.string.back))
                 }
+                Spacer(modifier = Modifier.height(8.dp))
 
+                Button(
+                    modifier = Modifier.fillMaxWidth(),
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = colorResource(id = R.color.purple_400)),
+                    onClick = onHomeBtnClick
+                ) {
+                    Text(text = "Beranda")
+                }
             }
         }
     }
