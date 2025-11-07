@@ -66,6 +66,12 @@ fun FormDataDiri(
             modifier = Modifier
                 .fillMaxWidth(0.9f)
                 .padding(10.dp)
-        ) {}
+        ) {
+            Column(
+                modifier = Modifier
+                    .padding(dimensionResource(id = R.dimen.padding_medium)),
+                verticalArrangement = Arrangement.spacedBy(10.dp)
+            ) {}
+        }
     }
 }
