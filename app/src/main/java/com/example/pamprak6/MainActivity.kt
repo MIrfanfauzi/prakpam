@@ -18,7 +18,11 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-
+        setContent {
+            Scaffold(modifier = Modifier.fillMaxSize()) { paddingValues ->
+                DataApp(modifier = Modifier.padding(paddingValues))
+            }
+        }
     }
 }
 
