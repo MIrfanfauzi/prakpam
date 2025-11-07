@@ -78,5 +78,15 @@ fun TampilanAwal(
             fontFamily = FontFamily.SansSerif,
             modifier = Modifier.align(Alignment.CenterHorizontally)
         )
+        Button(
+            modifier = Modifier
+                .padding(top = 32.dp)
+                .fillMaxWidth(),
+            colors = ButtonDefaults.buttonColors(
+                containerColor = colorResource(id = R.color.purple_700),
+                contentColor = Color.White
+            ),
+            onClick = onSubmitClick
+        ) {}
     }
 }
