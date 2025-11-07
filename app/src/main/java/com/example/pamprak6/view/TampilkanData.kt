@@ -27,6 +27,7 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.pamprak6.R
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -37,4 +38,11 @@ fun TampilData(
     alamat: String,
     onBackBtnClick: () -> Unit,
     onHomeBtnClick: () -> Unit
-) {}
+) {
+    val items = listOf(
+        Pair(first = stringResource(id = R.string.nama_Lengkap), second = nama),
+        Pair(first = stringResource(id = R.string.jenis_kelamin), second = jk),
+        Pair(first = "STATUS PERKAWINAN", second = status),
+        Pair(first = stringResource(id = R.string.alamat), second = alamat)
+    )
+}
