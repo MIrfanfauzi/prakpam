@@ -45,4 +45,22 @@ fun TampilData(
         Pair(first = "STATUS PERKAWINAN", second = status),
         Pair(first = stringResource(id = R.string.alamat), second = alamat)
     )
+    Scaffold(
+        modifier = Modifier,
+        topBar = {
+            TopAppBar(
+                title = {
+                    Text(
+                        text = "List Daftar Peserta",
+                        fontSize = 30.sp,
+                        color = Color.White,
+                        fontWeight = FontWeight.Bold
+                    )
+                },
+                colors = TopAppBarDefaults.mediumTopAppBarColors(
+                    containerColor = colorResource(id = R.color.purple_400)
+                )
+            )
+        }
+    ) {}
 }
