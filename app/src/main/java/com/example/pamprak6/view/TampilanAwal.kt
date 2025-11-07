@@ -59,5 +59,17 @@ fun TampilanAwal(
             painter = painterResource(id = R.drawable.logo),
             contentDescription = "Logo"
         )
+
+        Spacer(modifier = Modifier.height(16.dp))
+
+        Text(
+            text = "Muhammad Irfan Fauzi",
+            fontSize = 24.sp,
+            color = colorResource(id = R.color.purple_500),
+            fontWeight = FontWeight.Medium,
+            fontFamily = FontFamily.Monospace,
+            modifier = Modifier.align(Alignment.CenterHorizontally)
+        )
+
     }
 }
