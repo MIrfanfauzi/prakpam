@@ -115,9 +115,19 @@ fun FormDataDiri(
                     label = { Text(text = "Alamat") },
                     onValueChange = { textAlamat = it }
                 )
-
-
-
+                Button(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(top = 5.dp),
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = colorResource(id = R.color.purple_500)),
+                    enabled = textNama.isNotEmpty() && textAlamat.isNotEmpty(),
+                    onClick = {
+                        onSubmitClick(textNama, textJK, textStatus, textAlamat)
+                    }
+                ) {
+                    Text(text = stringResource(id = R.string.submit), color = Color.White)
+                }
             }
         }
     }
