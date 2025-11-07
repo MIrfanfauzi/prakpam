@@ -51,6 +51,13 @@ fun TampilanAwal(
                 modifier = Modifier
                     .align(Alignment.Center)
             )
+
         }
+        Spacer(modifier = Modifier.height(30.dp))
+
+        Image(
+            painter = painterResource(id = R.drawable.logo),
+            contentDescription = "Logo"
+        )
     }
 }
